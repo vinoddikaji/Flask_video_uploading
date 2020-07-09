@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+</head>
+<body>
+
+    <h1>Video Upload</h1>
+    <br>
+    <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept="video/*">
+    <input type="submit" value="submit" value="Upload">
+    </form>
+
+   <br>
+   <a href="/">Home</a>
+
+   <br>
+   <hr>
+   <a href="/gallery">All videos or retrived videos</a>
+    
+</body>
+</html>
+

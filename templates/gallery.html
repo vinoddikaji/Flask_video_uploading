@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Gallery</title>
+</head>
+
+<body>
+
+  {% for videos in video_name %}
+
+
+
+  <li>
+    <video id="myVideo" width="320" height="176" controls controlsList="nodownload">
+      <source src="{{ url_for('send_video', filename=videos) }}" type="video/mp4">
+    </video>
+  </li>
+
+
+
+  {% endfor %}
+  <br>
+
+  <a href="/">Home</a>
+
+
+  <script>
+    var vid = document.getElementById("myVideo");
+
+    function playVid() {
+      vid.play();
+    }
+
+    function pauseVid() {
+      vid.pause();
+    } 
+  </script>
+
+</body>
+
+</html>
